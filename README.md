@@ -98,14 +98,6 @@ Growy/
 
 ---
 
-## 🗺️ Site Map
-
-![Site Map](siteMap.jpg)
-
-## 🗄️ Database Diagram
-
-![Database Diagram](Project%20Details/databaseDiagram.png)
-
 
 ## 📞 Contact
 
