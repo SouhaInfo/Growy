@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    width: 100%;
+}
+
+/* Section Styles */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+}
+
+#description-section {
+    background: #e5f9ee; /* Updated background color */
+    color: #333;
+}
+
+#courses-section {
+    background: white; /* Updated background color */
+    color: #333;
+}
+
+#Announcement-section {
+    background: #e5f9ee; /* Updated background color */
+    color: #333;
+}
+
+#contribution-section {
+    background: #e5f9ee; /* Updated background color */
+    color: #333;
+}
+
+.content {
+    display: flex;
+    flex-direction: row; /* Default to row layout */
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    padding: 2rem;
+    gap: 1rem; /* Reduced gap between image and text */
+}
+
+.content .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.content .image img {
+    width: 100%; /* Full width */
+    max-width: 1000px; /* Increased max width for a larger image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.content .text {
+    flex: 1;
+    text-align: left;
+}
+
+.content .text h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.content .text p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.scroll-link, .courses-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #5a9a6e; /* Updated button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-link:hover, .courses-link:hover {
+    background-color: #4a7a5e; /* Keep this color for hover effect or change as needed */
+}
+
+/* Reverse layout for courses section */
+.reverse-layout .content {
+    flex-direction: row; /* Image on the right for larger screens */
+}
+
+/* Section Styles */
+#services-section {
+    background: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.services-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-box {
+    width: 250px; /* Fixed square dimensions */
+    height: 250px;
+    background-color: #5a9a6e;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-box p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.service-box:hover {
+    background-color: #4a7a5e; /* Darker green for hover effect */
+    transform: translateY(-5px); /* Lift on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .services-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .service-box {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #description-section .content {
+        flex-direction: column; /* Image comes before text on smaller screens */
+    }
+
+    .reverse-layout .content {
+        flex-direction: column; /* Keeps the image on top for the second section on smaller screens */
+    }
+
+    .content .text {
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .content .image {
+        order: -1; /* Move the image above the text in the second section */
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Additional Links Section Styles */
+#additional-links-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.link-box {
+    flex: 1;
+    background-color: #5a9a6e;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.link-box:hover {
+    background-color: #4a7a5e;
+    transform: translateY(-5px);
+}
+
+.link-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.link-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    color: #5a9a6e;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.link-button:hover {
+    background-color: #5a9a6e;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #additional-links-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    #courses-section .content {
+        flex-direction: column; /* Arrange items in a column for small screens */
+    }
+
+    #courses-section .image {
+        order: -1; /* Move the image above the text */
+    }
+
+    .content .text {
+        text-align: center; /* Center-align text for better readability */
+    }
+}

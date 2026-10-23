@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e5f9ee;
+}
+
+.cart-page {
+    margin: 100px auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 200px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th {
+    text-align: center;
+    padding: 5px;
+    color: white;
+    background: #5a9a6e;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+td a.remove-item {
+    color: #5a9a6e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+td a.remove-item:hover {
+    text-decoration: underline;
+}
+
+td img {
+    width: 200px;
+    height: 100px;
+    padding-right: 20px;
+}
+
+.total-price {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table {
+    border-top: 2px solid #5a9a6e;
+    width: 100%;
+    max-width: 250px;
+}
+
+td:last-child {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.paybtn {
+    width: 100px;
+    padding: 12px;
+    background-color: #5a9a6e;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: .5s;
+    float: right;
+}
+
+.paybtn:hover {
+    background-color: #437252;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');

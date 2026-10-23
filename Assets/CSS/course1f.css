@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5f9ee;
+}
+
+#course-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.course-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+/* Lessons Section */
+.lessons-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Space between each lesson box */
+}
+
+.lesson-box {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+.lesson-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.lesson-box:hover {
+    transform: translateY(-5px);
+}
+
+.lesson-image {
+    width: auto;
+    height: auto;
+    max-width: 150px; /* Increased max width */
+    max-height: 150px; /* Increased max height */
+    border-radius: 8px;
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    margin-right: 1rem; /* Adds space between image and text */
+}
+
+.lesson-info {
+    flex: 1;
+}
+
+.lesson-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.lesson-duration {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+ 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lesson-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .lesson-image {
+        width: 100%; /* Full width on small screens */
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .lesson-info {
+        text-align: center;
+        width: 100%;
+    }
+}

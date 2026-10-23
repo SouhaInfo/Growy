@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.copyright {
+    background-color: #e5f9ee;
+    text-align: center;
+    color: grey;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e5f9ee;
+}
+
+.container form {
+    width: 700px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px black);
+}
+
+form .row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.row .column {
+    flex: 1 1 250px;
+}
+
+.form-title {
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.column .input-box {
+    margin: 15px 0;
+}
+
+.input-box label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+input[type="file"] {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #5a9a6e;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.submit-btn:hover {
+    background-color: #437252;
+}

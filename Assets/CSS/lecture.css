@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Basic Styles for Lecture Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5f9ee; /* Background color */
+}
+
+#lecture-page {
+    max-width: 1000px; /* Increased max width */
+    margin: auto;
+    padding: 2rem;
+    background-color: white; /* White background for content area */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.lecture-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.lecture-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.lecture-video {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.lecture-video iframe {
+    width: 100%; /* Full width */
+    height: 500px; /* Increased height */
+    max-width: 800px; /* Max width for video */
+}
+
+.lecture-footer {
+    display: flex;
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center align items vertically */
+    margin-top: 2rem;
+}
+
+.previous-lecture,
+.next-lecture,
+.lecture-checkbox {
+    flex: 1; /* Take available space */
+    text-align: center; /* Center align text */
+}
+
+.previous-lecture-link,
+.next-lecture-link {
+    font-size: 1.5rem;
+    color: #5a9a6e; /* Link color */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Padding around the link */
+    border: 2px solid #5a9a6e; /* Border around the link */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.previous-lecture-link:hover,
+.next-lecture-link:hover {
+    background-color: #5a9a6e; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+
+.styled-checkbox {
+    display: none; /* Hide the default checkbox */
+}
+
+.checkbox-label {
+    position: relative;
+    padding-left: 30px; /* Space for custom checkbox */
+    cursor: pointer;
+    font-size: 1.1rem; /* Font size for checkbox label */
+}
+
+.checkbox-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px; /* Width of the custom checkbox */
+    height: 20px; /* Height of the custom checkbox */
+    border: 2px solid #5a9a6e; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    background: white; /* Background color */
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.styled-checkbox:checked + .checkbox-label::before {
+    background: #5a9a6e; /* Background when checked */
+    border-color: #5a9a6e; /* Border color when checked */
+}
+
+.styled-checkbox:checked + .checkbox-label::after {
+    content: '✔'; /* Tick mark */
+    position: absolute;
+    left: 3px; /* Adjust the position of the tick */
+    top: -2px; /* Adjust the position of the tick */
+    color: white; /* Color of the tick mark */
+    font-size: 16px; /* Size of the tick mark */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .lecture-footer {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align elements */
+    }
+
+    .previous-lecture,
+    .next-lecture,
+    .lecture-checkbox {
+        width: 100%; /* Full width on small screens */
+        margin: 0.5rem 0; /* Spacing between elements */
+    }
+
+    .lecture-title {
+        font-size: 2rem; /* Smaller title font size */
+    }
+
+    .lecture-description {
+        font-size: 1rem; /* Smaller description font size */
+    }
+
+    .lecture-video iframe {
+        height: 300px; /* Reduced video height on smaller screens */
+    }
+
+    .previous-lecture-link,
+    .next-lecture-link {
+        font-size: 1.2rem; /* Smaller link font size */
+        padding: 0.5rem; /* Less padding */
+    }
+
+    .checkbox-label {
+        font-size: 1rem; /* Smaller checkbox label font size */
+    }
+}
+
+@media (max-width: 480px) {
+    #lecture-page {
+        padding: 1rem; /* Less padding on small screens */
+    }
+
+    .lecture-title {
+        font-size: 1.5rem; /* Further reduced title font size */
+    }
+
+    .lecture-description {
+        font-size: 0.9rem; /* Further reduced description font size */
+    }
+
+    .lecture-video iframe {
+        height: 200px; /* Further reduced video height */
+    }
+
+    .previous-lecture-link,
+    .next-lecture-link {
+        font-size: 1rem; /* Smaller link font size */
+        padding: 0.3rem; /* Less padding */
+    }
+
+    .checkbox-label {
+        font-size: 0.9rem; /* Adjust checkbox label font size */
+    }
+
+    .previous-lecture,
+    .next-lecture,
+    .lecture-checkbox {
+        min-width: 80px; /* Minimum width for better visibility */
+    }
+}

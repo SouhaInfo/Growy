@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+body {
+    background-color: #e5f9ee;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 20%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 25px;
+    width: 70%;
+    max-width: 100%;
+    justify-content: center;
+    align-self: center;
+
+}
+
+.form-heading {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.announcement-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.announcement-form label {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+.announcement-form input,
+.announcement-form textarea,.announcement-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+
+.announcement-form input[type="file"] {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.date-time-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-time-row div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.date-time-row div:last-child {
+    margin-right: 0;
+}
+
+.announcement-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.last {
+    align-self: flex-end;
+    display: flex;
+    padding: 10px 0;
+}
+
+.submit-btn {
+    background-color: #5a9a6e;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 45px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s ease;
+    align-self: flex-end;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #489a5e;
+    transform: scale(1.05);
+}
+
+.image-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.image-upload:hover {
+    border-color: #489a5e;
+}
+
+.image-upload input[type="file"] {
+    display: none;
+}
+
+.image-upload label {
+    color: #5a9a6e;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+.copyright{
+    
+    background-color:#e5f9ee ;
+    text-align: center;
+    color: grey;
+    
+}
+
+
+/* Error message styling */
+.error-message {
+    color: rgb(237, 6, 6);
+    font-size: 13px;
+    margin-top: 0.8px;
+    display: none; /* Hidden by default; shown only when validation fails */
+}
+
+/* Input fields with validation errors */
+input:invalid, 
+textarea:invalid {
+    border-color: red;
+}
+
+/* Real-time red border for fields with errors */
+input.error, 
+textarea.error {
+    border: 1px solid red;
+}
+
+/* Notification styling */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffdddd;
+    color: #d8000c;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Success pop-up styling */
+.success-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #5a9a6e;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.success-popup .popup-content .checkmark {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.success-popup .popup-content p {
+    margin: 5px 0 0;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+        body{
+        min-height: 10vh;
+    }
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+    .form-heading {
+        font-size: 20px;
+    }
+    
+    .date-time-row div {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+}
+ 
+
+@media (max-width: 450px) {
+
+    body {
+       gap: 0px;
+       min-height: 0%;
+    }
+    
+    .container {
+        width: 100%;
+        border-radius: 0%;
+        padding: 20px 15px;
+        margin-bottom: 0px;
+    }
+    .form-heading {
+        font-size: 18px;
+    }
+    .date-time-row{
+        flex-direction: column;
+    }
+    .date-time-row div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .back-button, .submit-btn {
+        font-size: 10px;
+        padding: 7px 25px;
+        width: 100%; /* Full width for extra small screens */
+    }
+    .announcement-form input,
+    .announcement-form textarea {
+        font-size: 11px;
+    }
+    .last{
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+    .copyright
+      {
+        background-color: #fff;
+        font-size:11px ;
+      }
+      .error-message {
+        font-size: 9px;
+      }
+  
+}

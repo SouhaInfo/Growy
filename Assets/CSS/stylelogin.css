@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e5f9ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+   
+}
+
+.container {
+    background-color: #e5f9ee;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative; /* Set position for absolute children */
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 90vh; /* Max height to keep within the viewport */
+    width: 90%;
+    max-width: 100%;
+    min-height: 500px; /* Keep this to provide a minimum height */
+    z-index: 1; /* Base z-index for the container */
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* Full width on smaller screens */
+        height:100%;
+        min-height: 400px; /* Reduced minimum height */
+    }
+
+    .container p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .container span {
+        font-size: 10px; /* Smaller font size for mobile */
+    }
+
+    .container button {
+        padding: 10px 20px; /* Smaller button padding */
+        font-size: 12px; /* Smaller font size for buttons */
+    }
+
+    .container input {
+        padding: 5px; /* Smaller input padding */
+        font-size: 12px; /* Smaller font size for inputs */
+    }
+
+    .toggle-panel {
+        padding: 0 10px; /* Reduced padding */
+    }
+}
+
+.container p {
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    margin: 20px 0;
+}
+
+.container span {
+    font-size: 12px;
+}
+
+.container a {
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+    transition: color 0.3s ease;
+}
+
+.container a:hover {
+    color: #000000;
+}
+
+.container button {
+    background-color: #5a9a6e;
+    color: #fff;
+    font-size: 13px;
+    padding: 10px 50px;
+    border: 1px solid transparent;
+    border-radius: 0; /* No border radius */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #5a9a6e;
+}
+/* Style for the checkbox */
+#rememberMe {
+    all: unset; 
+    appearance: none; 
+    display: inline-block; 
+    width: 15px; 
+    height: 15px; 
+    border: 1px solid #4caf50; 
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    position: relative;
+}
+#rememberMe:checked {
+    background-color: #5a9a6e;
+    border-color: #5a9a6e;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="white" d="M6.173 11.25l-3.44-3.44a.75.75 0 0 1 1.06-1.06l2.94 2.94 6.44-6.44a.75.75 0 1 1 1.06 1.06L6.173 11.25z"/></svg>');
+    background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Style for the label */
+label[for="rememberMe"] {
+    margin-left: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Align the checkbox and label neatly */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+
+.container form {
+    background-color: #e5f9ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    height: 100%;
+}
+
+.container input {
+    background-color: #e5f9ee;
+    border: none;
+    margin: 10px 0;
+    padding: 12px 18px;
+    font-size: 14px;
+    border-radius: 0; /* No border radius */
+    width: 100%;
+    outline: none;
+    border: 1px solid #000000; /* Black border */
+}
+
+.container input:focus {
+    background-color: #fff;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2; /* Increase z-index for sign-in */
+}
+
+.container.active .sign-in {
+    transform: translateX(100%);
+}
+
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1; /* Lower z-index for sign-up */
+}
+
+.container.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5; /* Higher z-index when active */
+    animation: move 0.6s;
+}
+
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    border-radius: 0; /* No border radius */
+   
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 45px;
+    height: 45px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    z-index: 1000; /* Higher z-index for toggle */
+}
+
+.container.active .toggle-container {
+    transform: translateX(-100%);
+}
+
+.toggle {
+    background-color: #5a9a6e;
+    height: 100%;
+    background: linear-gradient(to right, #e5f9ee);
+    color: #fff;
+    position: relative;
+
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle {
+    transform: translateX(50%);
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right {
+    transform: translateX(200%);
+}
+
+#register {
+    border: 1px solid #fff; /* White border */
+    border-radius: 0; /* No border radius */
+    background-color: #5a9a6e; /* Background color */
+    color: #fff; /* Text color */
+    font-size: 13px;
+    padding: 12px 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transition for border */
+}
+
+#login {
+    border: 1px solid #fff; /* White border */
+    border-radius: 0; /* No border radius */
+    background-color: #5a9a6e; /* Background color */
+    color: #fff; /* Text color */
+    font-size: 13px;
+    padding: 13px 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transition for border */
+}

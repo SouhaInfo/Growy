@@ -1,0 +1,121 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for the cookie consent container */
+#cookies {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #7fa59c;  /* Softer green for a more relaxing feel */
+    color: white;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    animation: slide-up 0.5s ease-out;
+}
+
+/* Smooth slide-up animation */
+@keyframes slide-up {
+    from {
+        transform: translateX(-50%) translateY(100%);
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Styling for the cookie content */
+.cookie-subcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Styling for the text */
+.cookies p {
+    margin: 0;
+    font-size: 15px;
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Styling for the "More Info" link */
+.cookies a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.cookies a:hover {
+    color: #ffe600;  /* Softer yellow to fit better with the green */
+}
+.cook-btn {
+display: flex;
+justify-content: flex-end;
+}
+/* Styling for the accept button */
+#cookies-btn {
+    background-color: rgba(90, 154, 110, 0.8);  /* Softer button color */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 20px;  /* Space between the text and the button */
+}
+
+/* Hover effect for the button */
+#cookies-btn:hover {
+    background-color: #6fa685;  /* Darker shade for hover effect */
+    transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #cookies {
+        width: 90%;
+        padding: 15px 20px;
+    }
+
+    .cookies p {
+        font-size: 13px;
+    }
+
+    #cookies-btn {
+        font-size: 13px;
+        padding: 8px 18px;
+    }
+}
+
+@media (max-width: 450px) {
+    #cookies {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .cookies p {
+        font-size: 11px;
+    }
+
+    #cookies-btn {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+}

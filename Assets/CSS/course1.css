@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e5f9ee;
+    min-width: 210px;
+}
+
+main {
+    padding: 20px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 210px;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.course-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.course-details {
+    flex: 1;
+}
+
+.add-to-cart {
+    background-color: #5a9a6e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #5a9a6e;
+    padding-bottom: 5px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .course-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .course-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .add-to-cart {
+        padding: 8px 16px;
+    }
+}
+
+
+/* Button Styling */
+.button-container {
+    display: flex;
+
+}
+
+.button {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.explore-btn {
+    background-color: #5a9a6e;
+}
+
+.cart-btn {
+    background-color: #5a9a6e;
+    border: none;
+}
+
+.explore-btn:hover {
+    background-color: #487a58;
+}
+
+.cart-btn:hover {
+    background-color: #487a58;
+}

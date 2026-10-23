@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: #5a9a6e;
+  color: #e5f9ee;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.logo a {
+  color: #e5f9ee;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #e5f9ee;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  background-color: #95b7a0;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.hamburger span {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 3px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Show hamburger menu at 1020px and below */
+@media (max-width: 1020px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #5a9a6e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    display: none; /* Hidden by default */
+    z-index: 10;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 11;
+  }
+}
+
+/* Smaller screens adjustments */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo a {
+    font-size: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .login-btn,
+  .signup-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
