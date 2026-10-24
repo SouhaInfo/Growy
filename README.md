@@ -97,13 +97,3 @@ Growy/
    ```
 
 ---
-
-
-## 📞 Contact
-
-- 🌐 www.growy.com
-- ✉️ contact@growy.dz
-- 📱 +213 56 30 45 89
-- Facebook: Growy-childy
-- Instagram: growy2024
-- LinkedIn: Growy
